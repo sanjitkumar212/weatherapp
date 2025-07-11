@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather App</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata|Droid+Sans|Tangerine" rel="stylesheet">
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <style>
+    body {
+      font-family: 'Droid Sans', sans-serif;
+      background: linear-gradient(to right, #343434, #595959);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+    }
+
+    .card {
+      background-color: rgba(249, 245, 245, 0.2);
+      border-radius: 50px;
+      padding: 30px;
+      max-width: 350px;
+      text-align: center;
+      box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+      font-style: none;
+      
+    }
+
+    .refresh {
+      margin-top: 15px;
+      background-color: transparent;
+      border: 1px solid white;
+      padding: 5px 10px;
+      border-radius: 8px;
+      color: white;
+    }
+
+    .refresh:hover {
+      background-color: white;
+      color: #51565c;
+    }
+   
+    #icon {
+      width: 80px;
+      margin: 10px auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="card mx-auto">
+      <h2><i class="fa fa-map-marker-alt me-2"></i><span id="location"></span></h2>
+      <h6 id="weather">--</h6>
+      <h4><span id="temp">--</span><sup>°</sup>C</h4>
+      <img id="icon" src="" alt="weather icon"/>
+      <button onclick="window.location.reload()" class="refresh"><i class="fas fa-sync-alt"></i> Refresh</button>
+    </div>
+  </div>
+
+  <!-- Bootstrap Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+<!-- <script>
+    link=https://api.openweathermap.org/data/2.5/weather?q=delhi&appid=da229e0d4b2b19664a7bc64783eb6487;
+    var request=new XMLHttpRequest()
+    request.open('GET',link,true);
+    request.onload=function(){
+        var obj=JSON.parse(this.response);
+        console.log(obj);
+    }
+    if(request.status>200 && request.status<400 )
+    {
+        var temp
+    }
+    else{
+        console.log("city data not available")
+    }
+</script> -->
+</html>
